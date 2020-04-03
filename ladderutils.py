@@ -24,3 +24,17 @@ class Animal(object):
  #to be able to fly
   def fly(self):
     return self.fly
+
+ class Monkey(Animal):
+  
+ # creating an instance of class Monkey with inheritance from class Animal
+  def __init__(self,eyes,legs,hands):
+    self.name = 'Monkey'
+    Animal.__init__(self,eyes,legs,hands,0,False)
+
+  
+  def __repr__(self):
+   return "Monkey <eyes: {self.eyes}, legs:{self.legs}, hands:{self.hands}>".format(self=self)
+   
+
+ 
