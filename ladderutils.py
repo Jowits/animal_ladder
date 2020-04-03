@@ -37,4 +37,36 @@ class Animal(object):
    return "Monkey <eyes: {self.eyes}, legs:{self.legs}, hands:{self.hands}>".format(self=self)
    
 
- 
+  # creating an instance of class Squirrel with inheritance from class Animal
+class Squirrel(Animal):
+
+  def __init__(self,eyes,legs):
+    self.name = 'Squirrel'
+    Animal.__init__(self,eyes,legs,0,0,False) 
+
+  def __repr__(self):
+   return "Squirrel <eyes:{self.eyes}, legs: {self.legs}>".format(self=self)       
+  
+  
+        
+  
+# creating an instance of class Pigeon with inheritance from class Animal
+class Pigeon(Animal):
+
+  def __init__(self,eyes,legs,wings):
+    self.name = 'Pigeon'
+    Animal.__init__(self,eyes,legs,0,wings,True)
+  
+  def __repr__(self):
+   return "Pigeon <eyes: {self.eyes}, legs:{self.legs}, wings:{self.wings}>".format(self=self)
+
+
+# creating an instance of class Egale with inheritance from class Animal
+class Eagle(Animal):
+
+  def __init__(self,eyes,legs,wings):
+    self.name = 'Eagle'
+    Animal.__init__(self,eyes,legs,0,wings,True)
+
+  def __repr__(self):
+   return "Eagle <eyes:{self.eyes}, legs:{self.legs}, wings:{self.wings}>".format(self=self)
