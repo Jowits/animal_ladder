@@ -70,3 +70,33 @@ class Eagle(Animal):
 
   def __repr__(self):
    return "Eagle <eyes:{self.eyes}, legs:{self.legs}, wings:{self.wings}>".format(self=self)
+
+class Ladder:
+  ladder_pos = {}
+
+  # creating an instance of class Ladder
+  def __init__(self):
+    self.ladder_pos['3'] = Monkey(2,2,2)
+    self.ladder_pos['5'] = Squirrel(2,4)
+    self.ladder_pos['8'] = Pigeon(2,2,2)
+    self.ladder_pos['15'] = Eagle(2,2,2)
+    self.ladder_pos['17'] = Monkey(2,2,2)
+  #which animal is at the rung
+  def animal_at_rung(self,pos):
+      if(str(pos) in self.ladder_pos):
+        return self.ladder_pos[str(pos)]
+      else:
+        return ('None')
+
+   #get number of all animals
+  def get_animals_count(self):
+    return len(self.ladder_pos)
+  
+  #is it empty or not
+  def hop(self,pos):
+    if(str(pos+1) in self.ladder_pos):
+      return ("Not Empty")
+    else:
+      self.ladder_pos[str(pos+1)] = self.ladder_pos[str(pos)]
+      del self.ladder_pos[str(pos)]
+      return ('None')
