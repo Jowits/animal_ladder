@@ -71,7 +71,8 @@ class Ladder:
     self.ladder_pos['8'] = Pigeon(2,2,2)
     self.ladder_pos['15'] = Eagle(2,2,2)
     self.ladder_pos['17'] = Monkey(2,2,2)
-  #which animal is at the rung
+
+  #which animal is at the rung of the ladder
   def animal_at_rung(self,pos):
       if(str(pos) in self.ladder_pos):
         return self.ladder_pos[str(pos)]
