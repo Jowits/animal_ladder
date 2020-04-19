@@ -78,11 +78,11 @@ class Ladder:
       else:
         return ('None')
 
-   #get number of all animals
+   #get number of all animals in the ladder
   def get_animals_count(self):
     return len(self.ladder_pos)
   
-  #is it empty or not
+  #check if is it empty or not
   def hop(self,pos):
     if(str(pos+1) in self.ladder_pos):
       return ("Not Empty")
